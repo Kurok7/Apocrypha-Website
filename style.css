@@ -24,88 +24,60 @@ body {
     background-color: rgb(143, 171, 233);
 }
 
-@media only screen and (max-width: 600px) { /* this says 'use the css properties defined below only when max width*/
-    /*is 600px (less than 600)*/
-    .main-nav {
-        font-size: 0.5em;
-        padding: 0;
-    }   /*this removes the spilling contacts gets when the screen/browser size gets small enough*/
-}
-
-.push {
+.contact {
     margin-left: auto; /* causes contacts to go all the way to the right of the page*/
 }
 
 li {
-    padding: 15px;
+    padding: 12px;
     text-transform: uppercase;
     
 }
 
-.DropdownMerch .dropdown-projects {
-    float: left;
-    overflow: hidden;
+.novels, .shop {
+    position: relative;
 }
 
-.DropdownMerch .Dropbtn {
+.novels > span, .shop > span {
+    z-index: 2;
+    position: relative;
     cursor: pointer;
-    font-size: 1em;
-    border: none;
-    text-transform: uppercase;
-    color: black;
-    padding: 15px;
-    font-family: inherit;
-    background-color: inherit;
-    margin: 0;
 }
 
-.dropdown-projects .Projectbtn {
-    cursor: pointer;
-    font-size: 1em;
-    border: none;
-    text-transform: uppercase;
-    color: black;
-    padding: 15px;
-    font-family: inherit;
-    background-color: inherit;
-    margin: 0;
-}
-
-.Dropdown-content {
-    display: none;
+.novels:hover .novel-choices, .shop:hover .shop-choices {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    background-color: #999898;
-    min-width: 30px;
-    box-shadow:0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    background: rgba(65, 62, 62, 0.267);
+    border-radius: 8px;
+    padding-left: 5px;
+    top: 53px;
+    left: -10px;
     z-index: 1;
 }
 
-.Dropdown-content a {
-    text-decoration: none;
-    display: block;
-    float: none;
-    color: black;
-    padding: 5px 8px;
-    text-align: left;
-    text-transform: capitalize;  
+.novel-choices, .shop-choices {
+    display: none;
 }
 
-.Dropdown-content a:hover  {
-    background-color: rgba(65, 62, 62, 0.267);
-    color: white;
+.novel-choices > li, .shop-choices > li{
+    list-style: none;
+    border-bottom: 1px solid #000;
+    padding: 0 20px 10px 20px;
+    margin: 10px;
 }
 
-.show {
-    display: block;
+.novel-choices > li:last-of-type, .shop-choices > li:last-of-type {
+    border-bottom: none;
 }
 
-a {
-    color: #000000;
+a, span {
+    color: #000;
     text-decoration: none;
 }
 
-a:hover {
-    color: #ffffff;
+a:hover, span:hover {
+    color: #fff;
 }
 
 .sticky {
@@ -119,28 +91,30 @@ a:hover {
  **********************************************************************/
 .container {
     /*show heigh: auto*/
-    height: 70vh; ;      /*vh is viewport height: This means a percentage of the viewport will always be shown
+    height: 70vh; ;      /*vh is viewport height: This means a 
+    percentage of the viewport will always be shown
     It always adjusts to whatever height the page is.*/
     display: flex;
     align-items: center;
-    justify-content: center;    /*align and justify center centers everything*/
+    justify-content: center;    /*align and justify center 
+                            centers everything*/
 }
 
 .cover {
     width: 30rem; /*resizes the image so it isn't so big*/
 }
 
-.IND, .WH, .gods, .house {
+.ind, .white, .gods, .house {
     font-size: 45px;
     font-family: helvetica;
 }
 
-.IND {
+.ind {
     color: red;
     text-align: center;
 }
 
-.WH {
+.white {
     font-style: italic;
     color: rgb(140, 151, 175);
     text-align: center;
@@ -195,8 +169,17 @@ img {
 
 footer {
     text-align: center;
-    color: rgb(143, 171, 233);
+    color: #000;
     font-size: 1em;
     font-style: italic;
+}
+
+@media (max-width: 600px) { /* this says 'use the css properties 
+    defined below only when max width is 600px (less than 600)*/
+    .main-nav {
+        font-size: 0.5em;
+        padding: 0;
+    }   /*this removes the spilling contacts gets when the 
+    screen/browser size gets small enough*/
 }
 /*https://paulund.co.uk/how-to-create-shiny-css-buttons*/
