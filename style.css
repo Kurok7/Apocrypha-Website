@@ -1,7 +1,12 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
 body {
-    margin: 0 auto; /*causes the space on the sides of the webpage to disappear */
     background: linear-gradient(to right, rgb(107, 107, 107), rgb(218, 203, 203));
-    
 }
 
 .zone {
