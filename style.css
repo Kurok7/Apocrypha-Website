@@ -1,171 +1,183 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 body {
-    background: linear-gradient(to right, rgb(107, 107, 107), rgb(218, 203, 203));
+	background: linear-gradient(to right, rgb(107, 107, 107), rgb(218, 203, 203));
 }
 
 .zone {
-    font-size: 1.5em;
-    border:2px ridge black;
+	font-size: 1.5em;
+	border: 2px ridge black;
 }
 
 .zone:hover {
-    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+	box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px,
+		inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
 }
 
 /**********************************************************************
  *  Nav Bar
  **********************************************************************/
 .main-nav {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    font-size: 1em;
-    background-color: rgb(143, 171, 233);
+	display: flex;
+	list-style: none;
+	margin: 0;
+	font-size: 1em;
+	background-color: rgb(143, 171, 233);
 }
 
 .contact {
-    margin-left: auto; /* causes contacts to go all the way to the right of the page*/
+	margin-left: auto; /* causes contacts to go all the way to the right of the page*/
 }
 
 li {
-    padding: 12px;
-    text-transform: uppercase;
-    
+	padding: 12px;
+	text-transform: uppercase;
 }
 
-.novels, .shop {
-    position: relative;
+.novels,
+.shop {
+	position: relative;
 }
 
-.novels > span, .shop > span {
-    z-index: 2;
-    position: relative;
-    cursor: pointer;
+.novels > span,
+.shop > span {
+	z-index: 2;
+	position: relative;
+	cursor: pointer;
 }
 
-.novels:hover .novel-choices, .shop:hover .shop-choices {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    background: rgba(65, 62, 62, 0.267);
-    border-radius: 8px;
-    padding-left: 5px;
-    top: 53px;
-    left: -10px;
-    z-index: 1;
+.novels:hover .novel-choices,
+.shop:hover .shop-choices {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	background: rgba(65, 62, 62, 0.267);
+	border-radius: 8px;
+	padding-left: 5px;
+	top: 53px;
+	left: -10px;
+	z-index: 1;
 }
 
-.novel-choices, .shop-choices {
-    display: none;
+.novel-choices,
+.shop-choices {
+	display: none;
 }
 
-.novel-choices > li, .shop-choices > li{
-    list-style: none;
-    border-bottom: 1px solid #000;
-    padding: 0 20px 10px 20px;
-    margin: 10px;
+.novel-choices > li,
+.shop-choices > li {
+	list-style: none;
+	border-bottom: 1px solid #000;
+	padding: 0 20px 10px 20px;
+	margin: 10px;
 }
 
-.novel-choices > li:last-of-type, .shop-choices > li:last-of-type {
-    border-bottom: none;
+.novel-choices > li:last-of-type,
+.shop-choices > li:last-of-type {
+	border-bottom: none;
 }
 
-a, span {
-    color: #000;
-    text-decoration: none;
+a,
+span {
+	color: #000;
+	text-decoration: none;
 }
 
-a:hover, span:hover {
-    color: #fff;
+a:hover,
+span:hover {
+	color: #fff;
 }
 
 .sticky {
-  /* position: fixed; allows nav bar to follow the scroller*/ 
-  top: 0;
-  width: 100%; /*makes the nav bar stick to the top*/
+	/* position: fixed; allows nav bar to follow the scroller*/
+	top: 0;
+	width: 100%; /*makes the nav bar stick to the top*/
 }
 
 /***********************************************************************
  *  Cover
  **********************************************************************/
 .container {
-    /*show heigh: auto*/
-    height: 70vh; ;      /*vh is viewport height: This means a 
+	/*show heigh: auto*/
+	height: 70vh; /*vh is viewport height: This means a 
     percentage of the viewport will always be shown
     It always adjusts to whatever height the page is.*/
-    display: flex;
-    align-items: center;
-    justify-content: center;    /*align and justify center 
+	display: flex;
+	align-items: center;
+	justify-content: center; /*align and justify center 
                             centers everything*/
 }
 
 .cover {
-    width: 30rem; /*resizes the image so it isn't so big*/
+	width: 30rem; /*resizes the image so it isn't so big*/
 }
 
-.ind, .white, .gods, .house {
-    font-size: 45px;
-    font-family: helvetica;
+.ind,
+.white,
+.gods,
+.house {
+	font-size: 45px;
+	font-family: helvetica;
 }
 
 .ind {
-    color: red;
-    text-align: center;
+	color: red;
+	text-align: center;
 }
 
 .white {
-    font-style: italic;
-    color: rgb(140, 151, 175);
-    text-align: center;
+	font-style: italic;
+	color: rgb(140, 151, 175);
+	text-align: center;
 }
 
 .gods {
-    color: gold;
-    text-align: center;
+	color: gold;
+	text-align: center;
 }
 
 .house {
-    color: brown;
-    text-align: center;
+	color: brown;
+	text-align: center;
 }
 /***********************************************************************
  *  Grid Panel
  **********************************************************************/
 .grid-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    grid-gap: 20px;
-    background: #bbb;
-    border:3px ridge black;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+	grid-gap: 20px;
+	background: #bbb;
+	border: 3px ridge black;
 }
 
 .box {
-    /* background-color: #444; */
-    margin: 10px;
-    cursor: pointer;
-    border:2px inset black;
-    transition: all 0.3s linear;
+	/* background-color: #444; */
+	margin: 10px;
+	cursor: pointer;
+	border: 2px inset black;
+	transition: all 0.3s linear;
 }
 
 .box:hover {
-    transform: rotate(-3deg);
-    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
-    background-color: black;
-}  
+	transform: rotate(-3deg);
+	box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px,
+		inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+	background-color: black;
+}
 
 .box > img {
-    width: 100%;
-    height: auto;
+	width: 100%;
+	height: auto;
 }
 
 img {
-    display: block; /* removes the small spacing underneath the images*/
+	display: block; /* removes the small spacing underneath the images*/
 }
 
 /***********************************************************************
@@ -173,18 +185,19 @@ img {
  **********************************************************************/
 
 footer {
-    text-align: center;
-    color: #000;
-    font-size: 1em;
-    font-style: italic;
+	text-align: center;
+	color: #000;
+	font-size: 1em;
+	font-style: italic;
 }
 
-@media (max-width: 600px) { /* this says 'use the css properties 
+@media (max-width: 600px) {
+	/* this says 'use the css properties 
     defined below only when max width is 600px (less than 600)*/
-    .main-nav {
-        font-size: 0.5em;
-        padding: 0;
-    }   /*this removes the spilling contacts gets when the 
+	.main-nav {
+		font-size: 0.5em;
+		padding: 0;
+	} /*this removes the spilling contacts gets when the 
     screen/browser size gets small enough*/
 }
 /*https://paulund.co.uk/how-to-create-shiny-css-buttons*/
